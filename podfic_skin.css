@@ -1,0 +1,198 @@
+/* Hi! I've decided to annotate the code so anybody can have a better idea of what different things do and what you can change without breaking anything =D Look for notes like these throughout!*/
+
+/* PREFACE 
+This section largely just gets rid of things like the summary, credits, A/Ns and so on. Feel free to keep whatever you want. */
+
+#workskin {
+  padding-bottom: 15px;
+  margin-top: -72px;
+}
+
+#workskin .preface h3.byline.heading,
+#workskin .preface .notes h3.heading,
+#workskin .preface h2.title,
+#workskin .preface h3.title,
+#workskin .jump,
+#workskin .associations,
+#workskin .summary.module {
+  display: none;
+}
+
+#workskin .notes {
+  text-align: center;
+}
+
+/* A/N styling*/
+#workskin .afterword.preface.group {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  border-radius: 6px;
+/*Change this for background colour. If you're unfamiliar with hex codes, googling 'hex colour picker' will give you just that; a colour picker where you can get hex codes =D*/
+  background-color: #df6749;
+/*and this for font colour*/
+  color: #dddddd;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#workskin .afterword.preface.group a,
+#workskin .afterword.preface.group a:visited {
+  text-decoration: none;
+/*and this for links font colour*/
+  color: #dddddd;
+}
+
+#workskin .afterword.preface.group a:hover {
+  text-decoration: none;
+/*visited links font colour*/
+  color: #fec3ac;
+}
+
+/* BODY
+This is the meat of the, uh, skin. Hm. Anyway, I don't recommend making non-cosmetic changes to this if you're not sure what they're gonna do. This is where things can break.*/
+
+#workskin img {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#workskin .podfic {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+/*This is the background gradient - in this example it changes from red to orange. You can play around with this however you want, but I suggest keeping the last two values the same, if you want the audio player to match in colour. I also use the last value for A/N background colour.*/
+  background-image: linear-gradient(#660112 , #a23030, #df6749 , #df6749 );
+  border: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 500px;
+  border-top-right-radius: 500px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#workskin .podfic img {
+  max-width: 500px;
+  width: 85%;
+  display: block;
+  border-radius: 500px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  -o-border-radius: 500px;
+  margin-left: auto;
+  margin-right: auto;
+/* This is the image border. I always use metallic colours for this, but you could also go for a solid colour, a different gradient, etc. The one's I've already got figured out are:
+Rose gold - used here
+Gold - #FFDE6C, #B97B38, #CE9949, #EDBE5C, #FFEFB1, #FFDE6C, #CE9949, #B97B38
+Platinum - #c8bddb, #66656a, #9ea0a9, #bdccdb, #f0eff5, #9ea0a9, #94949d, #bdccdb
+Silver - #686869, #868686, #686869, #c3c3c4, #686869, #404141, #c3c3c4
+Steel-ish - #a18d8a, #786764, #a18d8a, #c9aca7, #a18d8a, #404141, #544745*/
+  background: linear-gradient(white, white) padding-box, linear-gradient(155deg, #d38964, #d38964, #f4a989, #fec3ac, #f4a989, #a95533, #f4a989, #d38964) border-box;
+  border: 15px solid transparent;
+/*colour of the shadow, follows the RGB model. Last value is alpha with 1 being opaque and 0 transparent*/
+  -webkit-box-shadow: 0 0 20px rgba(48,4,11,0.8);
+  box-shadow: 0 0 20px rgba(48,4,11,0.8);
+}
+
+#workskin .podfic:hover img {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+}
+
+#workskin .podfic .description {
+  max-width: 500px;
+  width: 90%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -500px;
+  display: block;
+  text-align: center;
+  background-color: none;
+  opacity: 0;
+}
+
+#workskin .podfic .description::before {
+  content: '';
+  height: 15em;
+  max-height: 200px;
+  display: inline-block;
+}
+
+#workskin .podfic:hover .description {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  opacity: 1;
+}
+
+#workskin .podfic p:empty {
+  display: none !important;
+}
+
+#workskin .podfic p,
+#workskin .podfic h2,
+#workskin .podfic h4,
+#workskin .podfic a,
+#workskin .podfic a:visited {
+  text-decoration: none;
+  text-align: center;
+/*change main font colour*/
+  color: white;
+}
+
+/*change text size and font*/
+#workskin .podfic p {
+  font-weight: lighter;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 1.2em;
+}
+
+/*change title size and font*/
+#workskin .podfic h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: -0.7em;
+}
+
+#workskin .podfic a:hover {
+  text-decoration: none;
+/*change link font colour - I match this with the A/N one*/
+  color: #fec3ac;
+}
+
+#workskin :not(.userstuff)>audio {
+  width: 100%;
+}
+
+#workskin audio::-webkit-media-controls-panel {
+/*Audio player background colour - same as the last value of your gradient and the A/N background. Mind that not all browsers support this feature.*/
+  background-color: #df6749;
+}
+
+#workskin audio {
+  border: 1px white solid;
+  border-radius: 500px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  -o-border-radius: 500px;
+}
+
+#workskin hr {
+  width: 25px;
+  margin: 2em auto;
+  border: 0;
+  border-bottom: 5px dotted rgba(0, 0, 0, .04);
+  text-indent: 0 !important;
+}
